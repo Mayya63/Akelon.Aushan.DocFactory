@@ -5,15 +5,10 @@ namespace Akelon.Auchan.DocFactory
     public static class Placeholders
     {
         /// <summary>
-        /// Тэг начала вставки текстового элемента
+        /// Тэг начала и конца вставки текстового элемента
         /// </summary>
-        public static string TextPlaceholderStartTag { get; set; }
-        
-        /// <summary>
-        /// Тэг окончания вставки текстового элемента
-        /// </summary>
-        public static string TextPlaceholderEndTag { get; set; }
-
+        public static string TextPlaceholderTag { get; set; }
+                
         /// <summary>
         /// Тэг перевода строки
         /// </summary>
@@ -22,9 +17,7 @@ namespace Akelon.Auchan.DocFactory
 
         static Placeholders()
         {
-            TextPlaceholderStartTag = "#";
-            TextPlaceholderEndTag = ">";
-            NewLineTag = "<br/>";
+            TextPlaceholderTag = "#";
             TextPlaceholders = new Dictionary<string, string>();            
             
         }

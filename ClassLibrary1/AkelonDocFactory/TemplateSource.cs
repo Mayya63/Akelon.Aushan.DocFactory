@@ -35,21 +35,23 @@ namespace Akelon.Auchan.DocFactory
         /// </summary>
         public static string GetPathTemplate(this TemplateType value)
         {            
-            string path = Path.Combine(Path.GetFullPath(@"..\..\..\"), "Resources");
+            //string path = Path.Combine(Path.GetFullPath(@"..\..\..\"), "Resources");
             
+            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
+
             switch (value)
             {
                 case TemplateType.DefectVed:
-                    return Path.Combine(path, "defect_ved.docx");  
+                    return Path.Combine(path, @"AkelonDocFactory\Resources\defect_ved.docx");
 
                 case TemplateType.Zakaz:
-                    return Path.Combine(path, "Order.docx");
+                    return Path.Combine(path, @"AkelonDocFactory\Resources\Order.docx");
 
                 case TemplateType.Smeta:
-                    return Path.Combine(path, "Smeta.docx");
+                    return Path.Combine(path, @"AkelonDocFactory\Resources\Smeta.docx");
 
                 case TemplateType.TechAct:
-                    return Path.Combine(path, "TechnAct.docx");
+                    return Path.Combine(path, @"AkelonDocFactory\Resources\TechnAct.docx");
 
                 default:
                     return null;

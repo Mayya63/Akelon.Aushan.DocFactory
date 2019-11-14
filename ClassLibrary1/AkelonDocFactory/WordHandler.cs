@@ -49,12 +49,9 @@ namespace Akelon.Auchan.DocFactory
 
                 foreach (var text in document.Descendants<Text>())
                 {
-                    if (text.Text.Contains(Placeholders.TextPlaceholderStartTag))
-                        text.Text = text.Text.Replace(Placeholders.TextPlaceholderStartTag, "");
-
-                    if (text.Text.Contains(Placeholders.TextPlaceholderEndTag))
-                        text.Text = text.Text.Replace(Placeholders.TextPlaceholderEndTag, "");
-
+                    if (text.Text.Contains(Placeholders.TextPlaceholderTag))
+                        text.Text = text.Text.Replace(Placeholders.TextPlaceholderTag, "");
+                    
                     foreach (var replace in _newText)
                     {
                         if (text.Text == replace.Key)

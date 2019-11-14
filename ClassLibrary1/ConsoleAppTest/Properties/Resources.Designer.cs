@@ -59,45 +59,5 @@ namespace ConsoleAppTest.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] @__Дефект_ведомость__с_пояснениями_к_заполнению_ {
-            get {
-                object obj = ResourceManager.GetObject("__Дефект_ведомость__с_пояснениями_к_заполнению_", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] @__Заказ__с_пояснениями_к_заполнению_ {
-            get {
-                object obj = ResourceManager.GetObject("__Заказ__с_пояснениями_к_заполнению_", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] @__Смета__с_пояснениями_к_заполнению_ {
-            get {
-                object obj = ResourceManager.GetObject("__Смета__с_пояснениями_к_заполнению_", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] @__Технический_акт__с_пояснениями_к_заполнению_ {
-            get {
-                object obj = ResourceManager.GetObject("__Технический_акт__с_пояснениями_к_заполнению_", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }

@@ -10,8 +10,7 @@ namespace Akelon.Aushan.DocFactory.Test
         private static string _testFilename = @"D:\\1.docx";
         private static string _filename = TemplateSource.GetPathTemplate(TemplateSource.TemplateType.DefectVed);
 
-        [Fact]    
-        
+        [Fact]        
         public void GetFileFailtest()
         {
             Assert.Throws<FileNotFoundException>(() => StreamHandler.GetFileAsMemoryStream(_testFilename));

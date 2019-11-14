@@ -118,16 +118,5 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="__Дефект_ведомость__с_пояснениями_к_заполнению_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\@_Дефект_ведомость (с пояснениями к заполнению).docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="__Заказ__с_пояснениями_к_заполнению_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\@_Заказ (с пояснениями к заполнению).docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="__Смета__с_пояснениями_к_заполнению_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\@_Смета (с пояснениями к заполнению).docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="__Технический_акт__с_пояснениями_к_заполнению_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\@_Технический акт (с пояснениями к заполнению).docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
+  
 </root>
