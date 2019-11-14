@@ -14,7 +14,7 @@ namespace Akelon.Aushan.DocFactory.Test
         
         public void GetFileFailtest()
         {
-            Assert.Throws<IOException>(() => StreamHandler.GetFileAsMemoryStream(_testFilename));
+            Assert.Throws<FileNotFoundException>(() => StreamHandler.GetFileAsMemoryStream(_testFilename));
 
         }
         [Fact]
@@ -22,11 +22,18 @@ namespace Akelon.Aushan.DocFactory.Test
         {
             
             string startupPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
-            string _filename = Path.Combine(startupPath, @"AkelonDocFactory\Resources\defect_ved.docx");
-            
-            // assert
-            Assert.True(File.Exists(_filename));
            
+            string _filenameDef = Path.Combine(startupPath, @"AkelonDocFactory\Resources\defect_ved.docx");
+            string _filenameOrder = Path.Combine(startupPath, @"AkelonDocFactory\Resources\order.docx");
+            string _filenameSmeta = Path.Combine(startupPath, @"AkelonDocFactory\Resources\Smeta.docx");
+            string _filenameTech = Path.Combine(startupPath, @"AkelonDocFactory\Resources\TechnAct.docx");
+
+            // assert
+            Assert.True(File.Exists(_filenameDef));
+            Assert.True(File.Exists(_filenameOrder));
+            Assert.True(File.Exists(_filenameSmeta));
+            Assert.True(File.Exists(_filenameTech));
+
 
         }
     }

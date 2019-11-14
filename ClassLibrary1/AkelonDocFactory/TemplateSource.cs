@@ -43,13 +43,13 @@ namespace Akelon.Auchan.DocFactory
                     return Path.Combine(path, "defect_ved.docx");  
 
                 case TemplateType.Zakaz:
-                    return Path.Combine(path, "@_Заказ (с пояснениями к заполнению).docx");
+                    return Path.Combine(path, "Order.docx");
 
                 case TemplateType.Smeta:
-                    return Path.Combine(path, "@_Смета (с пояснениями к заполнению).docx");
+                    return Path.Combine(path, "Smeta.docx");
 
                 case TemplateType.TechAct:
-                    return Path.Combine(path, "@_Технический акт (с пояснениями к заполнению).docx");
+                    return Path.Combine(path, "TechnAct.docx");
 
                 default:
                     return null;
