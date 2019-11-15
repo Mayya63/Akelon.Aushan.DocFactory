@@ -1,33 +1,26 @@
 ﻿using System.IO;
+using System;
 
 namespace Akelon.Auchan.DocFactory
 {
+    /// <summary>
+    /// Класс для работы с файловыми данными
+    /// </summary>
     public class StreamHandler
     {
-        public static MemoryStream GetFileAsMemoryStream(string filename)
+        public static MemoryStream AddResourceToMemoryStream(byte[] resource)
         {
-            MemoryStream ms = new MemoryStream();
-            FileStream stream = null;
-
             try
             {
-                stream =  new FileStream(filename, FileMode.Open, FileAccess.Read);
-                
-                using (stream)
-                {
-                    stream.CopyTo(ms);
-                }            
+                MemoryStream ms = new MemoryStream(resource);
+            
+                ms.Position = 0;
+                return ms;
             }
-            catch (IOException)
+            catch (ArgumentNullException)
             {
-                if (stream != null)
-                    stream.Close();
                 throw;
             }
-                                  
-            ms.Position = 0;
-            return ms;   
-            
         }
 
         public static void WriteMemoryStreamToDisk(MemoryStream ms, string filename)

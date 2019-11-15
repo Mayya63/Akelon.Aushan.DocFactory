@@ -121,4 +121,13 @@
   <data name="defect_ved" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defect_ved.docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="order" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\order.docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Smeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Smeta.docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TechnAct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TechnAct.docx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

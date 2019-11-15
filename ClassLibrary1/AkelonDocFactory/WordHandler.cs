@@ -2,37 +2,38 @@
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 using System.Collections.Generic;
-
 namespace Akelon.Auchan.DocFactory
 {
+    /// <summary>
+    /// Класс для работы с Word документами
+    /// </summary>
     public class WordHandler
     {
-
+        /// <summary>
+        /// Пустой шаблон
+        /// </summary>
         private MemoryStream _template;
-        private Dictionary<string, string> _newText;
-        private string _outPath;
 
-
-        public WordHandler( Dictionary<string, string> newText, string outPathName)
-        {         
-            _newText = newText;
-            _outPath = outPathName;
+        /// <summary>
+        /// Входящие данные
+        /// </summary>
+        private Dictionary<string, string> _document;
+        
+        public WordHandler(Dictionary<string, string> document,  byte[] resourceTemplate)
+        {
+            _document = document;
+            _template = StreamHandler.AddResourceToMemoryStream(resourceTemplate);
         }
 
-        public MemoryStream ReplaceTexts(string docTemplateFilename)
+        /// <summary>
+        /// Выполнить замену стандартных ключей в шаблоне на данные из модели
+        /// </summary>
+        /// <returns>Заполненный шаблон</returns>
+        public MemoryStream ReplaceTexts()
         {
-            try
-            {
-                _template = StreamHandler.GetFileAsMemoryStream(docTemplateFilename);
-            }
-            catch (IOException)
-            {
-                throw;
-            }
             using (WordprocessingDocument doc = WordprocessingDocument.Open(_template, true))
             {
-                //doc.ChangeDocumentType(WordprocessingDocumentType.Document);
-
+               
                 MainDocumentPart mainPart = doc.MainDocumentPart;
 
                 if (mainPart == null)
@@ -52,7 +53,7 @@ namespace Akelon.Auchan.DocFactory
                     if (text.Text.Contains(Placeholders.TextPlaceholderTag))
                         text.Text = text.Text.Replace(Placeholders.TextPlaceholderTag, "");
                     
-                    foreach (var replace in _newText)
+                    foreach (var replace in _document)
                     {
                         if (text.Text == replace.Key)
                         {
@@ -62,9 +63,7 @@ namespace Akelon.Auchan.DocFactory
                 }
 
                 _template.Position = 0;
-                return _template;
-
-                // document.Save();                
+                return _template;             
 
             }
         }

@@ -1,4 +1,7 @@
 ﻿using System.IO;
+using System;
+using System.Resources;
+using System.Reflection;
 
 namespace Akelon.Auchan.DocFactory
 {
@@ -33,29 +36,27 @@ namespace Akelon.Auchan.DocFactory
         /// <summary>
         /// Получить путь для типа шаблона
         /// </summary>
-        public static string GetPathTemplate(this TemplateType value)
-        {            
-            //string path = Path.Combine(Path.GetFullPath(@"..\..\..\"), "Resources");
-            
-            string path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
+        public static byte[] GetRecourceForTemplate(this TemplateType value)
+        {                        
 
             switch (value)
             {
                 case TemplateType.DefectVed:
-                    return Path.Combine(path, @"AkelonDocFactory\Resources\defect_ved.docx");
+                    return Properties.Resources.defect_ved;
 
                 case TemplateType.Zakaz:
-                    return Path.Combine(path, @"AkelonDocFactory\Resources\Order.docx");
+                    return Properties.Resources.order;
 
                 case TemplateType.Smeta:
-                    return Path.Combine(path, @"AkelonDocFactory\Resources\Smeta.docx");
+                    return Properties.Resources.Smeta;
 
                 case TemplateType.TechAct:
-                    return Path.Combine(path, @"AkelonDocFactory\Resources\TechnAct.docx");
+                    return Properties.Resources.TechnAct; // Path.Combine(path, @"AkelonDocFactory\Resources\TechnAct.docx");
 
                 default:
-                    return null;
+                    return new byte[0];
             }
+            
         }
 
     }

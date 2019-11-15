@@ -69,5 +69,35 @@ namespace Akelon.Auchan.DocFactory.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] order {
+            get {
+                object obj = ResourceManager.GetObject("order", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] Smeta {
+            get {
+                object obj = ResourceManager.GetObject("Smeta", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] TechnAct {
+            get {
+                object obj = ResourceManager.GetObject("TechnAct", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
