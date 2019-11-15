@@ -1,12 +1,11 @@
 ﻿using System.Reflection;
 using Xunit;
 using Akelon.Auchan.DocFactory.TemplateModels;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Akelon.Aushan.DocFactory.Test
 {
-    public class VerifyEntityTests
+    public class DefectVedVerifyTests
     {
         public class TestDefVedEntity
         {
@@ -32,7 +31,7 @@ namespace Akelon.Aushan.DocFactory.Test
         }
         
         [Fact]
-        public void GetFileFailtest()
+        public void VerifyPropertiesTest()
         {
             var testModel = new TestDefVedEntity();
             var originalModel = new DefectVedEntity();
@@ -45,8 +44,7 @@ namespace Akelon.Aushan.DocFactory.Test
                 var t = properties.Where(x => x.Name == prop.Name).ToList();
                 Assert.True(t.Count > 0);
             }
-        }
-        
+        }        
 
     }
 }
