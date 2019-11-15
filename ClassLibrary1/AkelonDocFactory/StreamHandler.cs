@@ -29,7 +29,7 @@ namespace Akelon.Auchan.DocFactory
 
             ms.Position = 0; 
 
-            using (FileStream file = new FileStream(filename, FileMode.Create, System.IO.FileAccess.Write))
+            using (FileStream file = new FileStream(filename, FileMode.Create, FileAccess.Write))
                 ms.CopyTo(file);
         }
 

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Akelon.Auchan.DocFactory;
+﻿using Akelon.Auchan.DocFactory;
 using Akelon.Auchan.DocFactory.TemplateModels;
 using System.IO;
 using System;
@@ -41,7 +40,8 @@ namespace ConsoleAppTest
             };
 
             var generator = new GeneratorDocuments();
-            try            {
+            try           
+            {
                 
                 var  dictDoc = DefVed.GetDictionaryProperties();
 

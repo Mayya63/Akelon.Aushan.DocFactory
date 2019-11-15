@@ -13,16 +13,9 @@ namespace Akelon.Aushan.DocFactory.Test
 
         [Fact]        
         public void GetFileFailtest()
-        {           
-            Assert.Throws<FileNotFoundException>(() => StreamHandler.AddResourceToMemoryStream(File.ReadAllBytes(_testFilename)));
-        }
+        {          
+            Assert.True(StreamHandler.AddResourceToMemoryStream(_filename).Length > 0);
+        }               
         
-        /*[Fact]
-        public void InvalidNameFile()
-        {
-                    
-           
-        }
-        */
     }
 }
